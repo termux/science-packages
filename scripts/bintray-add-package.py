@@ -311,7 +311,7 @@ def main():
         if os.path.exists(build_script_path):
             metadata = PackageMetadata(build_script_path)
         else:
-            print(f"[!] Package '{package_name}' is not exist.")
+            print(f"[!] Package '{package_name}' does not exist.")
             sys.exit(1)
 
         http_session = requests.Session()
