@@ -32,6 +32,5 @@ termux_step_post_make_install() {
 		Requires:
 		Libs: -L\${libdir} -lhdf5
 		Cflags: -I\${includedir}
-		
 	HERE
 }

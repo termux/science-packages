@@ -106,7 +106,7 @@ build-x86_64:
 upload-packages:
   stage: deploy
   only:
-    - master@grimler91/science-packages
+    - master@grimler/science-packages
   script:
     - bash ./scripts/gitlab-ci-upload.sh
   retry:
