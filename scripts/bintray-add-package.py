@@ -210,6 +210,24 @@ def req_upload_package(session, metadata, debfiles_dir):
 
     print(f"[@] Finished publication of package '{metadata.name}'.")
 
+def req_sign_repo(session, gpg_passphrase):
+    """Sign bintray repo."""
+
+    session.headers.update({
+        "X-GPG-PASSPHRASE": gpg_passphrase
+    })
+
+    print(f"[@] Signing repository... ", end="", flush=True)
+
+    # Send a request to trigger repo signing
+    response = session.post(f"https://api.bintray.com/calc_metadata/{session.auth[0]}/{REPO_NAME}")
+
+    if response.status_code == 202:
+        print("done")
+    else:
+        print("failure")
+        print(f"[!] {response.json()['message']}.")
+        sys.exit(1)
 
 def show_usage():
     """Print information about usage."""
@@ -279,6 +297,10 @@ def main():
     except:
         print("[!] Environment variable 'BINTRAY_API_KEY' is not set.")
         sys.exit(1)
+    try:
+        gpg_passphrase = os.environ['GPG_PASSPHRASE']
+    except:
+        print("[@] Environment variable 'GPG_PASSPHRASE' is not set. Repository will not be signed.")
 
     # Process all specified packages.
     for package_name in args:
@@ -299,6 +321,11 @@ def main():
             req_delete_package(http_session, metadata)
         else:
             req_upload_package(http_session, metadata, debfiles_dir)
+
+    if gpg_passphrase:
+        http_session = requests.Session()
+        http_session.auth = (bintray_user, bintray_api_key)
+        req_sign_repo(http_session, gpg_passphrase)
 
     sys.exit(0)
 
