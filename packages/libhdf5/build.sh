@@ -25,12 +25,13 @@ termux_step_post_make_install() {
 		exec_prefix=\${prefix}
 		libdir=\${exec_prefix}/lib
 		includedir=\${exec_prefix}/include
-
+ 
 		Name: hdf5
 		Description: $TERMUX_PKG_DESCRIPTION
 		Version: $TERMUX_PKG_VERSION
 		Requires:
 		Libs: -L\${libdir} -lhdf5
 		Cflags: -I\${includedir}
+
 	HERE
 }
