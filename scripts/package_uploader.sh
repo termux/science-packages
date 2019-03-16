@@ -35,7 +35,7 @@ PACKAGE_DELETE_MODE=false
 KEEP_OLD_VERSION=false
 
 # Bintray-specific configuration.
-BINTRAY_REPO_NAME="science-packages"
+BINTRAY_REPO_NAME="science-packages-24"
 BINTRAY_REPO_GITHUB="termux/science-packages"
 BINTRAY_REPO_DISTRIBUTION="science"
 BINTRAY_REPO_COMPONENT="stable"
