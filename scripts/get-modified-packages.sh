@@ -38,8 +38,10 @@ elif [ -n "$CI_COMMIT_SHA" ]; then
 	fi
 
 	if [ "$CI_COMMIT_BEFORE_SHA" = "0000000000000000000000000000000000000000" ]; then
+		echo "[*] Diffing ${CI_COMMIT_SHA}" >&2
 		UPDATED_FILES=$(git diff-tree --no-commit-id --name-only -r "$CI_COMMIT_SHA" 2>/dev/null | grep -P "packages/")
 	else
+		echo "[*] Diffing between commits ${CI_COMMIT_BEFORE_SHA} and ${CI_COMMIT_SHA}" >&2
 		UPDATED_FILES=$(git diff-tree --no-commit-id --name-only -r "${CI_COMMIT_BEFORE_SHA}..${CI_COMMIT_SHA}" 2>/dev/null | grep -P "packages/")
 	fi
 else
