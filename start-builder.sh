@@ -54,7 +54,7 @@ fi
 		DEPENDENCIES=""
 		DEPENDENCIES+="sqlite3" #needed by proj
 		docker exec --tty "$CONTAINER_NAME" sudo apt update
-		docker exec --tty "$CONTAINER_NAME" sudo apt install $DEPENDENCIES
+		docker exec --tty "$CONTAINER_NAME" sudo apt install -y $DEPENDENCIES
 	fi
 
 	if [ $# -ge 1 ]; then
