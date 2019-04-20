@@ -50,10 +50,11 @@ fi
 			docker exec --tty "$CONTAINER_NAME" sudo groupmod -g $(id -g) builder
 		fi
 
-		# echo "[*] Installing dependencies in $CONTAINER_NAME..."
-		# DEPENDENCIES=""
-		# docker exec --tty "$CONTAINER_NAME" sudo apt update
-		# docker exec --tty "$CONTAINER_NAME" sudo apt install $DEPENDENCIES
+		echo "[*] Installing dependencies in $CONTAINER_NAME..."
+		DEPENDENCIES=""
+		DEPENDENCIES+="sqlite3" # Needed by proj
+		docker exec --tty "$CONTAINER_NAME" sudo apt update
+		docker exec --tty "$CONTAINER_NAME" sudo apt install $DEPENDENCIES
 	fi
 
 	if [ $# -ge 1 ]; then
