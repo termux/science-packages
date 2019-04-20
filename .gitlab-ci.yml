@@ -30,6 +30,9 @@ before_script:
     - unset BINTRAY_GPG_SUBJECT
     - unset BINTRAY_GPG_PASSPHRASE
     - MODIFIED_PACKAGES=$(./scripts/get-modified-packages.sh)
+    - DEPENDENCIES="sqlite3"
+    - sudo apt update
+    - sudo apt install -y $DEPENDENCIES
     - cd ./termux-packages
     - |
       for package in $MODIFIED_PACKAGES; do
