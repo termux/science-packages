@@ -52,7 +52,7 @@ fi
 
 		echo "[*] Installing dependencies in $CONTAINER_NAME..."
 		DEPENDENCIES=""
-		DEPENDENCIES+="sqlite3" # Needed by proj
+		DEPENDENCIES="$DEPENDENCIES sqlite3" # Needed by proj
 		docker exec --tty "$CONTAINER_NAME" sudo apt update
 		docker exec --tty "$CONTAINER_NAME" sudo apt install $DEPENDENCIES
 	fi
