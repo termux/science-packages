@@ -1,4 +1,9 @@
 # Termux science packages
+
+[![Powered by JFrog Bintray](./.github/static/powered-by-bintray.png)](https://bintray.com)
+
+[![pipeline status](https://gitlab.com/grimler/science-packages/badges/master/pipeline.svg)](https://gitlab.com/grimler/science-packages/commits/master)
+
 This repository contains packages that are more or less related to science, i.e. they might not be of interest for the average termux user.
 
 # Building a package
@@ -17,7 +22,7 @@ You can then build a package with the following:
 ./build-package.sh name-of-package
 ```
 Note that this currently only works outside of the docker container.
-To build from the docker container, termux-root-packages has to be a subfolder of termux-packages, and a science package can then be built with
+To build from the docker container, science-packages has to be a subfolder of termux-packages, and a science package can then be built with
 ```sh
 ./build-package.sh science-packages/packages/package-to-build
 ```
