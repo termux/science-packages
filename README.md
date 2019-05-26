@@ -2,7 +2,7 @@
 
 [![Powered by JFrog Bintray](./.github/static/powered-by-bintray.png)](https://bintray.com)
 
-[![pipeline status](https://gitlab.com/grimler/science-packages/badges/master/pipeline.svg)](https://gitlab.com/grimler/science-packages/commits/master)
+[![pipeline status](https://api.cirrus-ci.com/github/termux/science-packages.svg)](https://api.cirrus-ci.com/github/termux/science-packages.svg)
 
 This repository contains packages that are more or less related to science, i.e. they might not be of interest for the average termux user.
 
