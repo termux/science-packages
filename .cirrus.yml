@@ -49,6 +49,8 @@ build_task:
     cd ./termux-packages
     # sqlite3 needed by proj
     DEPENDENCIES="sqlite3"
+    # protobuf-c-compiler needed by mapserver
+    DEPENDENCIES="$DEPENDENCIES protobuf-c-compiler"
     sudo apt update
     sudo apt install -y $DEPENDENCIES
     for package in $MODIFIED_PACKAGES; do
