@@ -47,6 +47,7 @@ translate_package_name() {
 		eigen) translated_name="eigen3";;
 		libhdf5) translated_name="hdf5";;
 		netcdf-c) translated_name="netcdf";;
+		libgeos) translated_name="geos";;
 
 		*) translated_name="$1";;
 	esac
