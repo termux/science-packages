@@ -11,3 +11,7 @@ TERMUX_PKG_BREAKS="gdal-dev"
 TERMUX_PKG_REPLACES="gdal-dev"
 TERMUX_PKG_BUILD_IN_SRC=true
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS="--with-sqlite3=$TERMUX_PREFIX"
+
+termux_step_pre_configure() {
+	CXXFLAGS+=" -DDOXYGEN_SKIP"
+}
