@@ -3,6 +3,7 @@ TERMUX_PKG_DESCRIPTION="MapServer is CGI-based platform for publishing spatial d
 TERMUX_PKG_MAINTAINER="Bjoern Schilberg @BjoernSchilberg"
 TERMUX_PKG_LICENSE="MIT"
 TERMUX_PKG_VERSION=7.4.1
+TERMUX_PKG_REVISION=1
 TERMUX_PKG_SRCURL=https://download.osgeo.org/mapserver/mapserver-${TERMUX_PKG_VERSION}.tar.gz
 TERMUX_PKG_SHA256=ec61388902dab9db2debf826cb9a57cabff2e7ab49fb1c82df2aa8e0253b206e
 TERMUX_PKG_DEPENDS="libc++, libiconv, freetype, libcurl, libcairo, libxml2, openjpeg, proj, gdal, libprotobuf-c"
