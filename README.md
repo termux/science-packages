@@ -6,6 +6,10 @@
 
 This repository contains packages that are more or less related to science, i.e. they might not be of interest for the average termux user.
 
+# Contributing
+
+Information on how to open pull requests to help keep the packages here up to date can be read in [CONTRIBUTING.md](CONTRIBUTING.md)
+
 # Building a package
 To build a package, first clone science-packages,
 ```sh
