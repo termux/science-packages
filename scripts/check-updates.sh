@@ -44,7 +44,6 @@ translate_package_name() {
 	local translated_name
 
 	case "$1" in
-		eigen) translated_name="eigen3";;
 		libhdf5) translated_name="hdf5";;
 		netcdf-c) translated_name="netcdf";;
 		libgeos) translated_name="geos";;
