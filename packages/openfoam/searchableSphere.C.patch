@@ -1,0 +1,11 @@
+--- ./src/meshTools/searchableSurfaces/searchableSphere/searchableSphere.C.orig	2020-12-25 20:50:38.735992974 +0100
++++ ./src/meshTools/searchableSurfaces/searchableSphere/searchableSphere.C	2020-12-25 21:03:38.759992416 +0100
+@@ -40,6 +40,8 @@
+ #include "searchableSphere.H"
+ #include "addToRunTimeSelectionTable.H"
+ 
++#include <array>
++
+ // * * * * * * * * * * * * * * Static Data Members * * * * * * * * * * * * * //
+ 
+ namespace Foam
