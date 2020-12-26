@@ -134,7 +134,7 @@ diff -u -r ../rules.orig/General/general ./wmake/rules/General/general
  GINC       =
 -GLIBS      = -lm
 -GLIB_LIBS  =
-+GLIBS      = -lm -fuse-ld=bfd -Wl,-rpath=@TERMUX_PREFIX@/lib,--enable-new-dtags,--as-needed,-z,relro,-z,now -lPstream -L$(WM_PROJECT_DIR)/platforms/$(WM_ARCH)$(WM_COMPILER)$(WM_PRECISION_OPTION)$(WM_LABEL_OPTION)$(WM_COMPILE_OPTION)/lib/openmpi-system
++GLIBS      = -lm -Wl,-rpath=@TERMUX_PREFIX@/lib,--enable-new-dtags,--as-needed,-z,relro,-z,now -lPstream -L$(WM_PROJECT_DIR)/platforms/$(WM_ARCH)$(WM_COMPILER)$(WM_PRECISION_OPTION)$(WM_LABEL_OPTION)$(WM_COMPILE_OPTION)/lib/sys-openmpi
 +GLIB_LIBS  = 
  
  
