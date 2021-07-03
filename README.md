@@ -2,6 +2,8 @@
 
 [![Last build status](https://github.com/termux/science-packages/workflows/Packages/badge.svg)](https://github.com/termux/science-packages/actions)
 
+[![Powered by FossHost](.github/static/powered-by-fosshost.png)](https://fosshost.org)
+
 This repository contains packages that are more or less related to science, i.e. they might not be of interest for the average termux user.
 
 # Contributing
