@@ -1,5 +1,7 @@
---- ../cpl_port.h.orig	2019-05-24 13:50:47.754028778 +0200
-+++ ./port/cpl_port.h	2019-05-24 14:28:25.219164021 +0200
+diff --git a/gdal/port/cpl_port.h b/gdal/port/cpl_port.h
+index d33d20b..25dead8 100644
+--- a/gdal/port/cpl_port.h
++++ b/gdal/port/cpl_port.h
 @@ -140,7 +140,7 @@
  #include <stdarg.h>
  #include <string.h>
@@ -9,7 +11,7 @@
  
  #include <time.h>
  
-@@ -1118,7 +1118,7 @@
+@@ -1085,7 +1085,7 @@ inline bool operator!= (const bool& one, const MSVCPedanticBool& other) { return
  #include <set>
  #include <string>
  #include <cstddef>
