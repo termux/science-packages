@@ -1,7 +1,5 @@
-diff --git a/gdal/port/cpl_port.h b/gdal/port/cpl_port.h
-index d33d20b..25dead8 100644
---- a/gdal/port/cpl_port.h
-+++ b/gdal/port/cpl_port.h
+--- ../cpl_port.h
++++ ./port/cpl_port.h
 @@ -140,7 +140,7 @@
  #include <stdarg.h>
  #include <string.h>
